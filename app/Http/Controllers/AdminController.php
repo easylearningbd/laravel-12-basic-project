@@ -51,8 +51,20 @@ class AdminController extends Controller
       // End Method 
 
       public function VerificationVerify(Request $request){
-        
+
+        $request->validate(['code' => 'required|numeric']);
+
+        if ($request->code == session('verification_code')) {
+            Auth::loginUsingId(session('user_id'));
+
+            session()->forget(['verification_code','user_id']);
+            return redirect()->intended('/dashboard');
+
+        }
+
+        return back()->withErrors(['code' => 'Invalid Verification Code']);
       }
+       // End Method 
 
 
 
