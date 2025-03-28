@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="pt-0">
-    <form  method="POST" action="{{ route('login') }}" class="my-4">
+    <form  method="POST" action="{{ route('admin.login') }}" class="my-4">
         @csrf
 
         @if (session('error'))
