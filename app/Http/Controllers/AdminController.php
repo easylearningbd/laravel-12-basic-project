@@ -45,7 +45,15 @@ class AdminController extends Controller
       // End Method 
 
 
-      
+      public function ShowVerification(){
+        return view('auth.verify');
+      }
+      // End Method 
+
+      public function VerificationVerify(Request $request){
+        
+      }
+
 
 
 }
