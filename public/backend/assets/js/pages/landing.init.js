@@ -1,0 +1,1 @@
+"use strict";function windowScroll(){var n=document.getElementById("navbar");50<=document.body.scrollTop||50<=document.documentElement.scrollTop?n.classList.add("nav-sticky"):n.classList.remove("nav-sticky")}window.addEventListener("scroll",function(n){n.preventDefault(),windowScroll()});
