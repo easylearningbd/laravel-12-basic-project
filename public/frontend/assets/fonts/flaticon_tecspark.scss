@@ -1,0 +1,77 @@
+$flaticon_luminix-font: "flaticon_luminix";
+
+@font-face {
+    font-family: $flaticon_luminix-font;
+    src: url("./flaticon_luminix.woff2?1af72611aeacce1e3d034c502313dfa7") format("woff2"),
+url("./flaticon_luminix.woff?1af72611aeacce1e3d034c502313dfa7") format("woff"),
+url("./flaticon_luminix.eot?1af72611aeacce1e3d034c502313dfa7#iefix") format("embedded-opentype"),
+url("./flaticon_luminix.ttf?1af72611aeacce1e3d034c502313dfa7") format("truetype"),
+url("./flaticon_luminix.svg?1af72611aeacce1e3d034c502313dfa7#flaticon_luminix") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_luminix !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_luminix-map: (
+    "gear": "\f101",
+    "customer-support": "\f102",
+    "money-bag": "\f103",
+    "developer": "\f104",
+    "password": "\f105",
+    "megaphone": "\f106",
+    "vector": "\f107",
+    "data": "\f108",
+    "wrench": "\f109",
+    "briefcase": "\f10a",
+    "like": "\f10b",
+    "trophy": "\f10c",
+    "user": "\f10d",
+);
+
+.flaticon-gear:before {
+    content: map-get($flaticon_luminix-map, "gear");
+}
+.flaticon-customer-support:before {
+    content: map-get($flaticon_luminix-map, "customer-support");
+}
+.flaticon-money-bag:before {
+    content: map-get($flaticon_luminix-map, "money-bag");
+}
+.flaticon-developer:before {
+    content: map-get($flaticon_luminix-map, "developer");
+}
+.flaticon-password:before {
+    content: map-get($flaticon_luminix-map, "password");
+}
+.flaticon-megaphone:before {
+    content: map-get($flaticon_luminix-map, "megaphone");
+}
+.flaticon-vector:before {
+    content: map-get($flaticon_luminix-map, "vector");
+}
+.flaticon-data:before {
+    content: map-get($flaticon_luminix-map, "data");
+}
+.flaticon-wrench:before {
+    content: map-get($flaticon_luminix-map, "wrench");
+}
+.flaticon-briefcase:before {
+    content: map-get($flaticon_luminix-map, "briefcase");
+}
+.flaticon-like:before {
+    content: map-get($flaticon_luminix-map, "like");
+}
+.flaticon-trophy:before {
+    content: map-get($flaticon_luminix-map, "trophy");
+}
+.flaticon-user:before {
+    content: map-get($flaticon_luminix-map, "user");
+}
