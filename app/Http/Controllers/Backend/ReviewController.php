@@ -14,6 +14,11 @@ class ReviewController extends Controller
     }
     // End Method 
 
+    public function AddReview(){
+        return view('admin.backend.review.add_review');
+    }
+    // End Method 
+
 
 
 } 
