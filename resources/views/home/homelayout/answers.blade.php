@@ -9,8 +9,8 @@
           <div class="lonyo-faq-header">
             <h4>Is my financial data safe and secure?</h4>
             <div class="lonyo-active-icon">
-              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
-              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+              <img class="plasicon" src="{{ asset('frontend/assets/images/v1/mynus.svg') }}" alt="">
+              <img class="mynusicon" src="{{ asset('frontend/assets/images/v1/plas.svg') }}" alt="">
             </div>
           </div>
           <div class="lonyo-faq-body body2">
@@ -21,8 +21,8 @@
           <div class="lonyo-faq-header">
             <h4>Can I link multiple bank accounts and credit cards?</h4>
             <div class="lonyo-active-icon">
-              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
-              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+              <img class="plasicon" src="{{ asset('frontend/assets/images/v1/mynus.svg') }}" alt="">
+              <img class="mynusicon" src="{{ asset('frontend/assets/images/v1/plas.svg') }}" alt="">
             </div>
           </div>
           <div class="lonyo-faq-body body2">
@@ -33,8 +33,8 @@
           <div class="lonyo-faq-header">
             <h4>How does the app help me stick to my budget?</h4>
             <div class="lonyo-active-icon">
-              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
-              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+              <img class="plasicon" src="{{ asset('frontend/assets/images/v1/mynus.svg') }}" alt="">
+              <img class="mynusicon" src="{{ asset('frontend/assets/images/v1/plas.svg') }}" alt="">
             </div>
           </div>
           <div class="lonyo-faq-body body2">
@@ -45,8 +45,8 @@
           <div class="lonyo-faq-header">
             <h4>Can I track my investments with the app?</h4>
             <div class="lonyo-active-icon">
-              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
-              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+              <img class="plasicon" src="{{ asset('frontend/assets/images/v1/mynus.svg') }}" alt="">
+              <img class="mynusicon" src="{{ asset('frontend/assets/images/v1/plas.svg') }}" alt="">
             </div>
           </div>
           <div class="lonyo-faq-body body2">
@@ -57,8 +57,8 @@
           <div class="lonyo-faq-header">
             <h4>Is the app free, or are there subscription fees?</h4>
             <div class="lonyo-active-icon">
-              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
-              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+              <img class="plasicon" src="{{ asset('frontend/assets/images/v1/mynus.svg') }}" alt="">
+              <img class="mynusicon" src="{{ asset('frontend/assets/images/v1/plas.svg') }}" alt="">
             </div>
           </div>
           <div class="lonyo-faq-body body2">

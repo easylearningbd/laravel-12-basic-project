@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-lg-5 order-lg-2">
           <div class="lonyo-content-thumb" data-aos="fade-up" data-aos-duration="700">
-            <img src="assets/images/v1/content-thumb2.png" alt="">
+            <img src="{{ asset('frontend/assets/images/v1/content-thumb2.png') }}" alt="">
           </div>
         </div>
         <div class="col-lg-7 d-flex align-items-center">
@@ -13,11 +13,11 @@
             <div class="mt-50">
               <ul class="tabs">
                 <li class="active-tab">
-                  <img src="assets/images/v1/tv.svg" alt="">
+                  <img src="{{ asset('frontend/assets/images/v1/tv.svg') }}" alt="">
                   <h4>Unified Dashboard</h4>
                 </li>
                 <li>
-                  <img src="assets/images/v1/alerm.svg" alt="">
+                  <img src="{{ asset('frontend/assets/images/v1/alerm.svg') }}" alt="">
                   <h4>Real-Time Updates</h4>
                 </li>
               </ul>

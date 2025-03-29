@@ -3,9 +3,9 @@
       <div class="row">
         <div class="col-lg-5">
           <div class="lonyo-video-thumb">
-            <img src="assets/images/v1/video-thumb.png" alt="">
+            <img src="{{ asset('frontend/assets/images/v1/video-thumb.png') }}" alt="">
             <a class="play-btn video-init" href="https://www.youtube.com/watch?v=fgZc7mAYIY8">
-              <img src="assets/images/v1/play-icon.svg" alt="">
+              <img src="{{ asset('frontend/assets/images/v1/play-icon.svg') }}" alt="">
               <div class="waves wave-1"></div>
               <div class="waves wave-2"></div>
               <div class="waves wave-3"></div>
@@ -26,7 +26,7 @@
         <div class="col-xl-4 col-md-6">
           <div class="lonyo-process-wrap" data-aos="fade-up" data-aos-duration="500">
             <div class="lonyo-process-number">
-              <img src="assets/images/v1/n1.svg" alt="">
+              <img src="{{ asset('frontend/assets/images/v1/n1.svg') }}" alt="">
             </div>
             <div class="lonyo-process-title">
               <h4>Connect Your Accounts</h4>
@@ -39,7 +39,7 @@
         <div class="col-xl-4 col-md-6">
           <div class="lonyo-process-wrap" data-aos="fade-up" data-aos-duration="700">
             <div class="lonyo-process-number">
-              <img src="assets/images/v1/n2.svg" alt="">
+              <img src="{{ asset('frontend/assets/images/v1/n2.svg') }}" alt="">
             </div>
             <div class="lonyo-process-title">
               <h4>Set Budgets & Goals</h4>
@@ -52,7 +52,7 @@
         <div class="col-xl-4 col-md-6">
           <div class="lonyo-process-wrap" data-aos="fade-up" data-aos-duration="900">
             <div class="lonyo-process-number">
-              <img src="assets/images/v1/n3.svg" alt="">
+              <img src="{{ asset('frontend/assets/images/v1/n3.svg') }}" alt="">
             </div>
             <div class="lonyo-process-title">
               <h4>Monitor & Automate</h4>

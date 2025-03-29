@@ -16,14 +16,14 @@
     <div class="lonyo-testimonial-slider-init">
       <div class="lonyo-t-wrap wrap2 light-bg">
         <div class="lonyo-t-ratting">
-          <img src="assets/images/shape/star.svg" alt="">
+          <img src="{{ asset('frontend/assets/images/shape/star.svg') }}" alt="">
         </div>
         <div class="lonyo-t-text">
           <p>"This app transformed my budgeting! It has been a clear view longer have to worry of my It has been success expenses and savings goals."</p>
         </div>
         <div class="lonyo-t-author">
           <div class="lonyo-t-author-thumb">
-            <img src="assets/images/v1/img7.png" alt="">
+            <img src="{{ asset('frontend/assets/images/v1/img7.png') }}" alt="">
           </div>
           <div class="lonyo-t-author-data">
             <p>Liam Gallagher</p>
@@ -33,14 +33,14 @@
       </div>
       <div class="lonyo-t-wrap wrap2 light-bg">
         <div class="lonyo-t-ratting">
-          <img src="assets/images/shape/star.svg" alt="">
+          <img src="{{ asset('frontend/assets/images/shape/star.svg') }}" alt="">
         </div>
         <div class="lonyo-t-text">
           <p>“The interface is intuitive, and I love how syncs with my bank accounts. I no longer have to worry about manual tracking. Highly recommend!”</p>
         </div>
         <div class="lonyo-t-author">
           <div class="lonyo-t-author-thumb">
-            <img src="assets/images/v1/img2.png" alt="">
+            <img src="{{ asset('frontend/assets/images/v1/img2.png') }}" alt="">
           </div>
           <div class="lonyo-t-author-data">
             <p>Michael Chen</p>
@@ -50,14 +50,14 @@
       </div>
       <div class="lonyo-t-wrap wrap2 light-bg">
         <div class="lonyo-t-ratting">
-          <img src="assets/images/shape/star.svg" alt="">
+          <img src="{{ asset('frontend/assets/images/shape/star.svg') }}" alt="">
         </div>
         <div class="lonyo-t-text">
           <p>“With this app, I’ve been able to stick to my budget and even save for a vacation.The budget alerts are a game changer!”</p>
         </div>
         <div class="lonyo-t-author">
           <div class="lonyo-t-author-thumb">
-            <img src="assets/images/v1/img3.png" alt="">
+            <img src="{{ asset('frontend/assets/images/v1/img3.png') }}" alt="">
           </div>
           <div class="lonyo-t-author-data">
             <p>David Nguyen</p>
@@ -67,14 +67,14 @@
       </div>
       <div class="lonyo-t-wrap wrap2 light-bg">
         <div class="lonyo-t-ratting">
-          <img src="assets/images/shape/star.svg" alt="">
+          <img src="{{ asset('frontend/assets/images/shape/star.svg') }}" alt="">
         </div>
         <div class="lonyo-t-text">
           <p>"Having all my accounts in one place gives me complete overspending accounts control over my money. Highly recommend!"</p>
         </div>
         <div class="lonyo-t-author">
           <div class="lonyo-t-author-thumb">
-            <img src="assets/images/v1/img5.png" alt="">
+            <img src="{{ asset('frontend/assets/images/v1/img5.png') }}" alt="">
           </div>
           <div class="lonyo-t-author-data">
             <p>Rachel Kim</p>
@@ -84,14 +84,14 @@
       </div>
       <div class="lonyo-t-wrap wrap2 light-bg">
         <div class="lonyo-t-ratting">
-          <img src="assets/images/shape/star.svg" alt="">
+          <img src="{{ asset('frontend/assets/images/shape/star.svg') }}" alt="">
         </div>
         <div class="lonyo-t-text">
           <p>"Having all my accounts in one place gives me complete control over my money. So user-friendly and helpful! Highly recommend!"</p>
         </div>
         <div class="lonyo-t-author">
           <div class="lonyo-t-author-thumb">
-            <img src="assets/images/v1/img6.png" alt="">
+            <img src="{{ asset('frontend/assets/images/v1/img6.png') }}" alt="">
           </div>
           <div class="lonyo-t-author-data">
             <p>Aisha Hassan</p>
@@ -102,6 +102,6 @@
     
     </div>
     <div class="lonyo-t-overlay2">
-      <img src="assets/images/v2/overlay.png" alt="">
+      <img src="{{ asset('frontend/assets/images/v2/overlay.png') }}" alt="">
     </div>
   </div>

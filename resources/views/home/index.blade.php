@@ -12,7 +12,7 @@
     @include('home.homelayout.get_all')
 
   <div class="lonyo-content-shape3">
-    <img src="assets/images/shape/shape2.svg" alt="">
+    <img src="{{ asset('frontend/assets/images/shape/shape2.svg') }}" alt="">
   </div>
   <!-- end content -->
 
@@ -20,7 +20,7 @@
 
 
   <div class="lonyo-content-shape1">
-    <img src="assets/images/shape/shape3.svg" alt="">
+    <img src="{{ asset('frontend/assets/images/shape/shape3.svg') }}" alt="">
   </div>
   <!-- end video -->
 
@@ -30,7 +30,7 @@
     @include('home.homelayout.answers')
 
   <div class="lonyo-content-shape3">
-    <img src="assets/images/shape/shape2.svg" alt="">
+    <img src="{{ asset('frontend/assets/images/shape/shape2.svg') }}" alt="">
   </div>
   <!-- end faq --> 
   @include('home.homelayout.apps')
