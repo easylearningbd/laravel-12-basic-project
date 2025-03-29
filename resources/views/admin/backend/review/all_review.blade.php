@@ -38,7 +38,7 @@
                 <td>{{ $item->name }}</td>
                 <td>{{ $item->position }}</td>
                 <td> <img src="{{ asset($item->image) }}" style="width:70px; height:40px;"> </td>
-                <td>{{ $item->message }}</td>
+                <td>{{ Str::limit($item->message, 50, '...')  }}</td>
                 <td>
     <a href="" class="btn btn-success btn-sm">Edit</a>  
     <a href="" class="btn btn-danger btn-sm">Delete</a>              
