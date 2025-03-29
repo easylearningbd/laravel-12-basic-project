@@ -47,7 +47,7 @@
         <div class="collapse" id="sidebarAuth">
             <ul class="nav-second-level">
         <li>
-            <a href="auth-login.html" class="tp-link">All Review</a>
+            <a href="{{ route('all.review') }}" class="tp-link">All Review</a>
         </li>
         <li>
             <a href="auth-register.html" class="tp-link">Add Review</a>
