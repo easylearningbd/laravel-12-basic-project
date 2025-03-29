@@ -41,7 +41,7 @@
                 <td>{{ Str::limit($item->message, 50, '...')  }}</td>
                 <td>
     <a href="{{ route('edit.review',$item->id) }}" class="btn btn-success btn-sm">Edit</a>  
-    <a href="" class="btn btn-danger btn-sm">Delete</a>              
+    <a href="{{ route('delete.review',$item->id) }}" class="btn btn-danger btn-sm" id="delete">Delete</a>              
 
                 </td>
             </tr> 
