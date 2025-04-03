@@ -35,7 +35,7 @@
     </div>
 </div>
 
- <form action="{{ route('update.review') }}" method="post" enctype="multipart/form-data">
+ <form action="{{ route('update.slider') }}" method="post" enctype="multipart/form-data">
     @csrf
     
     <input type="hidden" name="id" value="{{ $slider->id }}">
@@ -43,7 +43,7 @@
 <div class="card-body">
     
     <div class="form-group mb-3 row">
-        <label class="form-label"> Name</label>
+        <label class="form-label"> Title </label>
         <div class="col-lg-12 col-xl-12">
             <input class="form-control" type="text" name="title" value="{{ $slider->title }}" >
         </div>
