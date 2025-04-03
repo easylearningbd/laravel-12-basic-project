@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\ReviewController;
+use App\Http\Controllers\Backend\SliderController;
 
 Route::get('/', function () {
     return view('home.index');
@@ -47,6 +48,11 @@ Route::controller(ReviewController::class)->group(function(){
     Route::get('/edit/review/{id}', 'EditReview')->name('edit.review');
     Route::post('/update/review', 'UpdateReview')->name('update.review');
     Route::get('/delete/review/{id}', 'DeleteReview')->name('delete.review');
+
+});
+
+Route::controller(SliderController::class)->group(function(){
+    Route::get('/get/slider', 'GetSlider')->name('get.slider'); 
 
 });
 
