@@ -109,6 +109,19 @@ class SliderController extends Controller
     }
      // End Method 
 
+     public function EditAnswers(Request $request, $id){
+
+        $title = Title::findOrFail($id);
+
+        if ($request->has('answers')) {
+            $title->answers = $request->answers;
+        } 
+        $title->save();
+        return response()->json(['success' => true]);
+
+    }
+     // End Method 
+
 
 
 }
