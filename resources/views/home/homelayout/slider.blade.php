@@ -45,7 +45,7 @@
         let field = element.id === "slider-title" ? "title" : "description";
         let newValue = element.innerText.trim();
 
-        fatch(`/edit-slider/${sliderId}`,{
+        fetch(`/edit-slider/${sliderId}`,{
           method: "POST",
           headers: {
             "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),"Content-Type": "application/json"
@@ -61,8 +61,21 @@
         .catch(error => console.error("Error:", error)); 
       }
 
+      // Auto save on Enter Key
+      document.addEventListener("keydown", function(e){
+        if (e.key === "Enter") {
+          e.preventDefault();
+          saveChanges(e.target);
+        }
+      });
 
+      // Auto save on losing foucs
+      titleElement.addEventListener("blur", function () {
+        saveChanges(titleElement);
+      });
 
-
-    })
+      descElement.addEventListener("blur", function() {
+        saveChanges(descElement);
+      });
+    });
    </script>
