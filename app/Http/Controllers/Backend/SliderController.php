@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Slider;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
+use App\Models\Title;
 
 class SliderController extends Controller
 {
@@ -77,6 +78,19 @@ class SliderController extends Controller
         }
 
         $slider->save();
+        return response()->json(['success' => true]);
+
+    }
+     // End Method 
+
+     public function EditFeatures(Request $request, $id){
+
+        $title = Title::findOrFail($id);
+
+        if ($request->has('features')) {
+            $title->features = $request->features;
+        } 
+        $title->save();
         return response()->json(['success' => true]);
 
     }
