@@ -8,7 +8,7 @@ use App\Models\Slider;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 use App\Models\Title;
-
+ 
 class SliderController extends Controller
 {
     public function GetSlider(){

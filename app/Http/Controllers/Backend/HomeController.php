@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Feature;
+use App\Models\Clarifi;
 
 class HomeController extends Controller
 {
@@ -73,6 +74,13 @@ class HomeController extends Controller
         return redirect()->back()->with($notification); 
 
     }
+    // End Method 
+
+
+    public function GetClarifies(){
+        $clarifi = Clarifi::find(1);
+        return view('admin.backend.clarifi.get_clarifi',compact('clarifi')); 
+    } 
     // End Method 
 
 

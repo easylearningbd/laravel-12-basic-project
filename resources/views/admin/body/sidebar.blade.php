@@ -92,6 +92,21 @@
         </div>
     </li>
 
+    <li>
+        <a href="#sidebarError" data-bs-toggle="collapse">
+            <i data-feather="alert-octagon"></i>
+            <span> Clarifies  Setup </span>
+            <span class="menu-arrow"></span>
+        </a>
+        <div class="collapse" id="sidebarError">
+            <ul class="nav-second-level">
+                <li>
+                    <a href="{{ route('get.clarifies') }}" class="tp-link">Get Clarifies</a>
+                </li> 
+            </ul>
+        </div>
+    </li>
+
     
 
 
