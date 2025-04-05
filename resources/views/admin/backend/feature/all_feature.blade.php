@@ -39,8 +39,8 @@
                  
                 <td>{{ Str::limit($item->description, 50, '...')  }}</td>
                 <td>
-    <a href="{{ route('edit.review',$item->id) }}" class="btn btn-success btn-sm">Edit</a>  
-    <a href="{{ route('delete.review',$item->id) }}" class="btn btn-danger btn-sm" id="delete">Delete</a>              
+    <a href="{{ route('edit.feature',$item->id) }}" class="btn btn-success btn-sm">Edit</a>  
+    <a href="{{ route('delete.feature',$item->id) }}" class="btn btn-danger btn-sm" id="delete">Delete</a>              
 
                 </td>
             </tr> 
