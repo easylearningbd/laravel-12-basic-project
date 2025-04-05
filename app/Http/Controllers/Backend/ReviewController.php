@@ -52,7 +52,7 @@ class ReviewController extends Controller
         $review = Review::find($id);
         return view('admin.backend.review.edit_review',compact('review'));
 
-    }
+    } 
     // End Method 
 
     public function UpdateReview(Request $request){
