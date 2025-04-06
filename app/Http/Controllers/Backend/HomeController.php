@@ -302,5 +302,15 @@ public function DelectFaqs($id){
 }
 // End Method 
 
+public function UpdateApps(Request $request, $id){
+
+    $apps = App::findOrFail($id);
+
+    $apps->update($request->only(['title', 'description']));
+    
+    return response()->json(['success' => true, 'message' => 'Updated successfully']);
+}
+// End Method 
+
 
 }

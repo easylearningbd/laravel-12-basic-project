@@ -101,6 +101,13 @@ Route::controller(HomeController::class)->group(function(){
     
 });
 
+Route::controller(HomeController::class)->group(function(){
+    Route::post('/update-app/{id}', 'UpdateApps');
+    Route::post('/update-app-image/{id}', 'UpdateAppsImage');
+     
+    
+});
+
 
 
 });
