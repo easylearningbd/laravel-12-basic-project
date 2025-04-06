@@ -88,9 +88,14 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/all/connect', 'AllConnect')->name('all.connect');
     Route::get('/add/connect', 'AddConnect')->name('add.connect'); 
     Route::post('/store/connect', 'StoreConnect')->name('store.connect');
-    Route::post('/update-connect/{id}', 'UpdateConnect');
-      
+    Route::post('/update-connect/{id}', 'UpdateConnect'); 
+});
 
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/all/faqs', 'AllFaqs')->name('all.faqs');
+    Route::get('/add/faqs', 'AddFaqs')->name('add.faqs');
+    Route::post('/store/faqs', 'StoreFaqs')->name('store.faqs');
+    
 });
 
 

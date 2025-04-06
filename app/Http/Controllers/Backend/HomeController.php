@@ -8,6 +8,7 @@ use App\Models\Feature;
 use App\Models\Clarifi;
 use App\Models\Usability;
 use App\Models\Connect;
+use App\Models\Faq;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 
@@ -229,6 +230,35 @@ public function UpdateConnect(Request $request, $id){
     $connect->update($request->only(['title', 'description']));
     
     return response()->json(['success' => true, 'message' => 'Updated successfully']);
+}
+// End Method 
+
+
+public function AllFaqs(){
+    $faqs = Faq::latest()->get();
+    return view('admin.backend.faqs.all_faqs', compact('faqs'));
+}
+// End Method 
+
+public function AddFaqs(){ 
+    return view('admin.backend.faqs.add_faqs');
+}
+// End Method 
+
+public function StoreFaqs(Request $request){ 
+    
+    Faq::create([
+            'title' => $request->title, 
+            'description' => $request->description, 
+        ]);
+    
+
+    $notification = array(
+        'message' => 'Faqs Inserted Successfully',
+        'alert-type' => 'success'
+    );
+
+    return redirect()->route('all.faqs')->with($notification); 
 }
 // End Method 
 
