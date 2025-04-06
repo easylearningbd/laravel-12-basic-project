@@ -222,4 +222,15 @@ public function StoreConnect(Request $request){
 // End Method 
 
 
+public function UpdateConnect(Request $request, $id){
+
+    $connect = Connect::findOrFail($id);
+
+    $connect->update($request->only(['title', 'description']));
+    
+    return response()->json(['success' => true, 'message' => 'Updated successfully']);
+}
+// End Method 
+
+
 }

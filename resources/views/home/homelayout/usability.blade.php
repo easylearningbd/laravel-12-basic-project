@@ -38,10 +38,10 @@
               <img src="{{ asset('frontend/assets/images/v1/n'.$connect->id. '.svg') }}" alt="">
             </div>
             <div class="lonyo-process-title">
-              <h4>{{ $connect->title }}</h4>
+              <h4 class="editable-title" contenteditable="{{ auth()->check() ? 'true' : 'false' }}" data-id="{{ $connect->id }}">{{ $connect->title }}</h4>
             </div>
             <div class="lonyo-process-data">
-              <p>{{ $connect->description }}</p>
+              <p class="editable-description" contenteditable="{{ auth()->check() ? 'true' : 'false' }}" data-id="{{ $connect->id }}">{{ $connect->description }}</p>
             </div>
           </div>
         </div>
@@ -53,3 +53,49 @@
       </div>
     </div>
   </div>
+
+
+   {{-- CSRF Token  --}}
+   <meta name="csrf-token" content="{{ csrf_token() }}" >
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      
+      function saveChanges(element) {
+        let connectId = element.dataset.id;
+        let field = element.classList.contains("editable-title") ? "title" : "description";
+        let newValue = element.innerText.trim();
+
+        fetch(`/update-connect/${connectId}`,{
+          method: "POST",
+          headers: {
+            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),"Content-Type": "application/json"
+          },
+          body: JSON.stringify({ [field]:newValue })
+        })
+        .then(response => response.json())
+        .then(data => {
+          if(data.success) {
+            console.log(`${field} updated successfully`);
+          }
+        })
+        .catch(error => console.error("Error:", error)); 
+      }
+
+      // Auto save on Enter Key
+      document.addEventListener("keydown", function(e){
+        if (e.key === "Enter") {
+          e.preventDefault();
+          saveChanges(e.target);
+        }
+      });
+
+      // Auto save on losing foucs
+      document.querySelectorAll(".editable-title, .editable-description").forEach(el => {
+        el.addEventListener("blur", function() {
+          saveChanges(el);
+        });
+      });
+    
+    });
+   </script>
