@@ -35,7 +35,7 @@
     </div>
 </div>
 
- <form action="{{ route('update.slider') }}" method="post" enctype="multipart/form-data">
+ <form action="{{ route('update.usability') }}" method="post" enctype="multipart/form-data">
     @csrf
     
     <input type="hidden" name="id" value="{{ $usability->id }}">

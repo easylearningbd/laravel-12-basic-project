@@ -139,6 +139,57 @@ class HomeController extends Controller
     } 
     // End Method 
 
+    public function UpdateUsability(Request $request){
+
+        $usabi_id = $request->id;
+        $usability = Usability::find($usabi_id);
+
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $manager = new ImageManager(new Driver());
+            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+            $img = $manager->read($image);
+            $img->resize(560,400)->save(public_path('upload/usability/'.$name_gen));
+            $save_url = 'upload/usability/'.$name_gen;
+
+            if (file_exists(public_path($usability->image ))) {
+                @unlink(public_path($usability->image ));
+            }
+            
+            Usability::find($usabi_id)->update([
+                'title' => $request->title,
+                'description' => $request->description, 
+                'youtube' => $request->youtube,
+                'link' => $request->link,
+                'image' => $save_url,
+            ]);
+
+            $notification = array(
+                'message' => 'Usability Updated With image Successfully',
+                'alert-type' => 'success'
+            );
+    
+            return redirect()->back()->with($notification); 
+        
+        } else {
+
+            Usability::find($usabi_id)->update([
+                'title' => $request->title,
+                'description' => $request->description, 
+                'youtube' => $request->youtube,
+                'link' => $request->link, 
+            ]);
+
+            $notification = array(
+                'message' => 'Usability Updated Without image Successfully',
+                'alert-type' => 'success'
+            );
+    
+            return redirect()->back()->with($notification); 
+        } 
+    }
+    // End Method 
+
 
 
 }
