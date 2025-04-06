@@ -204,4 +204,22 @@ class HomeController extends Controller
 // End Method 
 
 
+public function StoreConnect(Request $request){ 
+    
+    Connect::create([
+            'title' => $request->title, 
+            'description' => $request->description, 
+        ]);
+    
+
+    $notification = array(
+        'message' => 'Connect Inserted Successfully',
+        'alert-type' => 'success'
+    );
+
+    return redirect()->route('all.connect')->with($notification); 
+}
+// End Method 
+
+
 }

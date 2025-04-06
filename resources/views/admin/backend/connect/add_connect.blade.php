@@ -35,7 +35,7 @@
     </div>
 </div>
 
- <form action="{{ route('store.feature') }}" method="post" enctype="multipart/form-data">
+ <form action="{{ route('store.connect') }}" method="post" enctype="multipart/form-data">
     @csrf
     
 <div class="card-body">
