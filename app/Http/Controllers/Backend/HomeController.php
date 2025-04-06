@@ -262,5 +262,44 @@ public function StoreFaqs(Request $request){
 }
 // End Method 
 
+public function EditFaqs($id){
+    $faqs = Faq::find($id);
+    return view('admin.backend.faqs.edit_faqs',compact('faqs'));
+
+} 
+// End Method 
+
+public function UpdateFaqs(Request $request){ 
+    $faq_id = $request->id;
+
+    Faq::find($faq_id)->update([
+            'title' => $request->title, 
+            'description' => $request->description, 
+        ]);
+    
+
+    $notification = array(
+        'message' => 'Faqs Updated Successfully',
+        'alert-type' => 'success'
+    );
+
+    return redirect()->route('all.faqs')->with($notification); 
+}
+// End Method 
+
+public function DelectFaqs($id){
+    Faq::find($id)->delete();
+
+    $notification = array(
+        'message' => 'Faqs Delect Successfully',
+        'alert-type' => 'success'
+    );
+
+    return redirect()->back()->with($notification); 
+
+
+}
+// End Method 
+
 
 }
