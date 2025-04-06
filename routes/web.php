@@ -78,6 +78,12 @@ Route::controller(HomeController::class)->group(function(){
 
 });
 
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/get/usability', 'GetUsability')->name('get.usability'); 
+    Route::post('/update/clarifies', 'UpdateClarifies')->name('update.clarifi'); 
+
+});
+
 
 
 });

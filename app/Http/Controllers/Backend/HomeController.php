@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Feature;
 use App\Models\Clarifi;
+use App\Models\Usability;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 
@@ -130,6 +131,12 @@ class HomeController extends Controller
             return redirect()->back()->with($notification); 
         } 
     }
+    // End Method 
+
+    public function GetUsability(){
+        $usability = Usability::find(1);
+        return view('admin.backend.usability.get_usability',compact('usability')); 
+    } 
     // End Method 
 
 
