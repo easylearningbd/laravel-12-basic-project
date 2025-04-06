@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Feature;
 use App\Models\Clarifi;
 use App\Models\Usability;
+use App\Models\Connect;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 
@@ -190,6 +191,17 @@ class HomeController extends Controller
     }
     // End Method 
 
+
+    public function AllConnect(){
+        $connect = Connect::latest()->get();
+        return view('admin.backend.connect.all_connect', compact('connect'));
+    }
+    // End Method 
+
+    public function AddConnect(){
+        return view('admin.backend.connect.add_connect');
+    }
+// End Method 
 
 
 }

@@ -93,12 +93,12 @@
     </li>
 
     <li>
-        <a href="#sidebarError" data-bs-toggle="collapse">
+        <a href="#Clarifies" data-bs-toggle="collapse">
             <i data-feather="alert-octagon"></i>
             <span> Clarifies  Setup </span>
             <span class="menu-arrow"></span>
         </a>
-        <div class="collapse" id="sidebarError">
+        <div class="collapse" id="Clarifies">
             <ul class="nav-second-level">
                 <li>
                     <a href="{{ route('get.clarifies') }}" class="tp-link">Get Clarifies</a>
@@ -117,6 +117,24 @@
             <ul class="nav-second-level">
                 <li>
                     <a href="{{ route('get.usability') }}" class="tp-link">Get Usability</a>
+                </li> 
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        <a href="#Connect" data-bs-toggle="collapse">
+            <i data-feather="alert-octagon"></i>
+            <span> Connect Setup </span>
+            <span class="menu-arrow"></span>
+        </a>
+        <div class="collapse" id="Connect">
+            <ul class="nav-second-level">
+                <li>
+                    <a href="{{ route('all.connect') }}" class="tp-link">All Connect</a>
+                </li> 
+                <li>
+                    <a href="{{ route('add.connect') }}" class="tp-link">Add Connect</a>
                 </li> 
             </ul>
         </div>
