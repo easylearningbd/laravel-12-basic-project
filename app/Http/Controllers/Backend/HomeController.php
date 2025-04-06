@@ -9,6 +9,7 @@ use App\Models\Clarifi;
 use App\Models\Usability;
 use App\Models\Connect;
 use App\Models\Faq;
+use App\Models\App;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 

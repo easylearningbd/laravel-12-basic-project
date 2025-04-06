@@ -1,15 +1,25 @@
+@php
+  $apps = App\Models\App::find(1);
+@endphp
 <section class="lonyo-cta-section bg-heading">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="lonyo-cta-thumb" data-aos="fade-up" data-aos-duration="500">
-            <img src="{{ asset('frontend/assets/images/v1/cta-thumb.png') }}" alt="">
+            <img id="appImage" src="{{ asset($apps->image) }}" alt="" style="cursor: pointer; width:100%; max-width:300px;">
+            @if (auth()->check())
+              <input type="file" id="uploadImage" style="display: none">              
+            @endif
           </div>
         </div>
         <div class="col-lg-6">
           <div class="lonyo-default-content lonyo-cta-wrap" data-aos="fade-up" data-aos-duration="700">
-            <h2>Start a new level of money management</h2>
-            <p>Our finance apps and software are powerful tools for managing personal or business finances, helping users stay organized, track financial health, and make informed decisions.</p>
+            
+  <h2 class="editable-title" contenteditable="{{ auth()->check() ? 'true' : 'false' }}" data-id="{{ $apps->id }}">{{ $apps->title }} </h2>
+
+  <p class="editable-description" contenteditable="{{ auth()->check() ? 'true' : 'false' }}" data-id="{{ $apps->id }}">{{ $apps->description }}</p>
+
+
             <div class="lonyo-cta-info mt-50" data-aos="fade-up" data-aos-duration="900">
               <ul>
                 <li>
