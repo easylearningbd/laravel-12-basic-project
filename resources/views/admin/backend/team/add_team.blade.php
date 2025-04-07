@@ -35,28 +35,28 @@
     </div>
 </div>
 
- <form action="{{ route('store.team') }}" method="post" enctype="multipart/form-data">
+ <form id="myForm" action="{{ route('store.team') }}" method="post" enctype="multipart/form-data">
     @csrf
     
 <div class="card-body">
     
     <div class="form-group mb-3 row">
         <label class="form-label"> Name</label>
-        <div class="col-lg-12 col-xl-12">
+        <div class="form-group col-lg-12 col-xl-12">
             <input class="form-control" type="text" name="name" >
         </div>
     </div>
 
     <div class="form-group mb-3 row">
         <label class="form-label">Position</label>
-        <div class="col-lg-12 col-xl-12">
+        <div class="form-group col-lg-12 col-xl-12">
             <input class="form-control" type="text" name="position"  >
         </div>
     </div>  
 
     <div class="form-group mb-3 row">
         <label class="form-label">Team Photo</label>
-        <div class="col-lg-12 col-xl-12">
+        <div class="form-group col-lg-12 col-xl-12">
             <input class="form-control" type="file" name="image" id="image" >
         </div>
     </div>
@@ -93,6 +93,52 @@
 
     </div> 
 </div> 
+
+
+<script type="text/javascript">
+    $(document).ready(function (){
+        $('#myForm').validate({
+            rules: {
+                name: {
+                    required : true,
+                },
+                position: {
+                    required : true,
+                },
+                image: {
+                    required : true,
+                },
+
+                
+            },
+            messages :{
+                name: {
+                    required : 'Please Enter name',
+                },
+                position: {
+                    required : 'Position Field is Required',
+                }, 
+                image: {
+                    required : 'Image Field is Required',
+                }, 
+                 
+
+            },
+            errorElement : 'span', 
+            errorPlacement: function (error,element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight : function(element, errorClass, validClass){
+                $(element).addClass('is-invalid');
+            },
+            unhighlight : function(element, errorClass, validClass){
+                $(element).removeClass('is-invalid');
+            },
+        });
+    });
+    
+</script>
 
 
 <script type="text/javascript">
