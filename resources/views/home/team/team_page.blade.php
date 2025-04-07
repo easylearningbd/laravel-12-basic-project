@@ -1,5 +1,6 @@
 @extends('home.home_master')
 @section('home')
+ 
 
 <div class="breadcrumb-wrapper light-bg">
     <div class="container">
@@ -28,22 +29,29 @@
       <div class="lonyo-section-title max-w616">
         <h2>Meet our brilliant team members</h2>
       </div>
+
+    @php
+    $team = App\Models\Team::latest()->get();
+     @endphp
+
+
       <div class="row">
        
-       
+       @foreach ($team as $item) 
         <div class="col-lg-3 col-md-6">
           <div class="lonyo-team-wrap" data-aos="fade-up" data-aos-duration="500">
             <div class="lonyo-team-thumb">
-              <a href="single-team.html"><img src="{{ asset('frontend/assets/images/about-us/t1.png') }}" alt=""></a>
+              <a href="single-team.html"><img src="{{ asset($item->image ) }}" alt=""></a>
             </div>
             <div class="lonyo-team-content2">
               <a href="single-team.html">
-                <h6>Michael Chen</h6>
+                <h6>{{ $item->name }}</h6>
               </a>
-              <p>Chief Executive Officer</p>
+              <p>{{ $item->position }}</p>
             </div>
           </div>
         </div>
+        @endforeach
 
 
          
