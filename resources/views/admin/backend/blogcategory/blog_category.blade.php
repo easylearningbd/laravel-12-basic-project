@@ -67,14 +67,20 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h5>Text in a modal</h5>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <form action="{{ route('store.blog.category') }}" method="post">
+            @csrf
+
+            <div class="form-group col-md-12">
+                <label for="input1" class="form-label">Blog Category Name </label>
+                <input type="text" name="category_name" class="form-control" id="input1">
+
+            </div> 
                 
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="modal-footer"> 
+                <button type="submit" class="btn btn-primary">Save changes</button>
             </div>
+        </form>
         </div>
     </div>
 </div>
