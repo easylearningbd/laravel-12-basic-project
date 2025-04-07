@@ -178,6 +178,23 @@
         </div>
     </li>
 
+
+    <li>
+        <a href="#About" data-bs-toggle="collapse">
+            <i data-feather="alert-octagon"></i>
+            <span> About Page Setup </span>
+            <span class="menu-arrow"></span>
+        </a>
+        <div class="collapse" id="About">
+            <ul class="nav-second-level">
+                <li>
+                    <a href="{{ route('get.aboutus') }}" class="tp-link">About Page </a>
+                </li> 
+                 
+            </ul>
+        </div>
+    </li>
+
     
 
 
