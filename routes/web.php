@@ -114,10 +114,10 @@ Route::controller(HomeController::class)->group(function(){
 Route::controller(TeamController::class)->group(function(){
     Route::get('/all/team', 'AllTeam')->name('all.team');
     Route::get('/add/team', 'AddTeam')->name('add.team');
-    Route::post('/store/review', 'StoreReview')->name('store.review');
-    Route::get('/edit/review/{id}', 'EditReview')->name('edit.review');
-    Route::post('/update/review', 'UpdateReview')->name('update.review');
-    Route::get('/delete/review/{id}', 'DeleteReview')->name('delete.review');
+    Route::post('/store/team', 'StoreTeam')->name('store.team');
+    Route::get('/edit/team/{id}', 'EditTeam')->name('edit.team');
+    Route::post('/update/team', 'UpdateTeam')->name('update.team');
+    Route::get('/delete/team/{id}', 'DeleteTeam')->name('delete.team');
 
 });
 

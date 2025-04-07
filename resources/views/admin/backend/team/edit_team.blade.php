@@ -9,7 +9,7 @@
 
         <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
             <div class="flex-grow-1">
-                <h4 class="fs-18 fw-semibold m-0">Add Team </h4>
+                <h4 class="fs-18 fw-semibold m-0">Edit Team </h4>
             </div>
         </div> 
 
@@ -30,29 +30,32 @@
 <div class="card-header">
     <div class="row align-items-center">
         <div class="col">                      
-            <h4 class="card-title mb-0">Add Team</h4>                      
+            <h4 class="card-title mb-0">Edit Team</h4>                      
         </div><!--end col-->                                                       
     </div>
 </div>
 
- <form action="{{ route('store.team') }}" method="post" enctype="multipart/form-data">
+ <form action="{{ route('update.team') }}" method="post" enctype="multipart/form-data">
     @csrf
     
+    <input type="hidden" name="id" value="{{ $team->id }}">
+
 <div class="card-body">
     
     <div class="form-group mb-3 row">
         <label class="form-label"> Name</label>
         <div class="col-lg-12 col-xl-12">
-            <input class="form-control" type="text" name="name" >
+            <input class="form-control" type="text" name="name" value="{{ $team->name }}" >
         </div>
     </div>
 
     <div class="form-group mb-3 row">
         <label class="form-label">Position</label>
         <div class="col-lg-12 col-xl-12">
-            <input class="form-control" type="text" name="position"  >
+            <input class="form-control" type="text" name="position"  value="{{ $team->position }}"  >
         </div>
-    </div>  
+    </div> 
+ 
 
     <div class="form-group mb-3 row">
         <label class="form-label">Team Photo</label>
@@ -64,7 +67,7 @@
     <div class="form-group mb-3 row">
         <label class="form-label"> </label>
         <div class="col-lg-12 col-xl-12">
-            <img id="showImage" src="{{ url('upload/no_image.jpg') }}" class="rounded-circle avatar-xxl img-thumbnail float-start" alt="image profile">   
+            <img id="showImage" src="{{ asset($team->image) }}" class="rounded-circle avatar-xxl img-thumbnail float-start" alt="image profile">   
 
         </div>
     </div>
