@@ -35,7 +35,7 @@
     </div>
 </div>
 
- <form action="{{ route('update.slider') }}" method="post" enctype="multipart/form-data">
+ <form action="{{ route('update.about') }}" method="post" enctype="multipart/form-data">
     @csrf
     
     <input type="hidden" name="id" value="{{ $about->id }}">
@@ -52,7 +52,12 @@
     <div class="form-group mb-3 row">
         <label class="form-label">Description</label>
         <div class="col-lg-12 col-xl-12">
-            <textarea name="description" class="form-control">{{ $about->description }}</textarea>
+            
+            <textarea name="description" id="description" style="display: none;"></textarea>
+
+            <div id="quill-editor" style="height: 200px;">
+                {!! $about->description !!}
+            </div>
         </div>
     </div>
 
@@ -96,6 +101,13 @@
     </div> 
 </div> 
 
+
+<script>  
+    document.querySelector('form').onsubmit = function() {
+        var description = document.querySelector('#description');
+        description.value = quill.root.innerHTML;  
+    };
+</script>
 
 <script type="text/javascript">
     $(document).ready(function(){

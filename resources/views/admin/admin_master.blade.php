@@ -13,6 +13,11 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico') }}">
 
+        <!-- Quill css -->
+        <link href="{{ asset('backend/assets/libs/quill/quill.core.js') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('backend/assets/libs/quill/quill.snow.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('backend/assets/libs/quill/quill.bubble.css') }}" rel="stylesheet" type="text/css" />
+
          <!-- Datatables css -->
          <link href="{{ asset('backend/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
          <link href="{{ asset('backend/assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
@@ -96,6 +101,12 @@
  <!-- Datatable Demo App Js -->
  <script src="{{ asset('backend/assets/js/pages/datatable.init.js') }}"></script>
 
+  <!-- Quill Editor Js -->
+  <script src="{{ asset('backend/assets/libs/quill/quill.core.js') }}"></script>
+  <script src="{{ asset('backend/assets/libs/quill/quill.min.js') }}"></script>
+
+  <!-- Quill Demo Js -->
+  <script src="{{ asset('backend/assets/js/pages/quilljs.init.js') }}"></script>
 
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> 
  <script src="{{ asset('backend/assets/js/code.js') }}"></script>
