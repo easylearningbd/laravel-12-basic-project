@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\ReviewController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\HomeController;
+use App\Http\Controllers\FrontendController;
 
 Route::get('/', function () {
     return view('home.index');
@@ -106,9 +107,9 @@ Route::controller(HomeController::class)->group(function(){
     Route::post('/update-app-image/{id}', 'UpdateAppsImage');
      
     
-});
-
-
+}); 
 
 });
 
+// Out of any middleware 
+Route::get('/team', [FrontendController::class, 'OurTeam'])->name('our.team');

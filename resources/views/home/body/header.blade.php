@@ -3,7 +3,7 @@
       <div class="row gx-3 align-items-center justify-content-between">
         <div class="col-8 col-sm-auto ">
           <div class="header-logo1 ">
-            <a href="index.html">
+            <a href="{{ url('/') }}">
               <img src="{{ asset('frontend/assets/images/logo/logo-dark.svg') }}" alt="logo">
             </a>
           </div>
@@ -14,7 +14,7 @@
               <ul>
 
                 <li>
-                  <a href="contact-us.html">Home</a>
+                  <a href="{{ url('/') }}">Home</a>
                 </li> 
                 <li class="menu-item-has-children">
                   <a href="#">About Us</a>
@@ -25,7 +25,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="index-02.html">
+                      <a href="{{ route('our.team') }}">
                         Team
                       </a>
                     </li> 
