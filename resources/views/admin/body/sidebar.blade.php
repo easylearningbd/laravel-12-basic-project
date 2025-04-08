@@ -237,9 +237,9 @@
     </li>
 
     <li>
-        <a href="widgets.html" class="tp-link">
+        <a href="{{ route('contact.all.message') }}" class="tp-link">
             <i data-feather="aperture"></i>
-            <span> Widgets </span>
+            <span> Contact Message </span>
         </a>
     </li>
 

@@ -149,6 +149,11 @@ Route::controller(BlogController::class)->group(function(){
 
 });
 
+Route::controller(FrontendController::class)->group(function(){
+    Route::get('/contact/all/message', 'ContactAllMessage')->name('contact.all.message');
+     
+});
+
 
 });
 

@@ -125,6 +125,12 @@ class FrontendController extends Controller
     }
     // End Method 
 
+    public function ContactAllMessage(){
+        $message = Contact::latest()->get();
+        return view('admin.backend.contact.all_message',compact('message'));
+    }
+     // End Method 
+
 
 
 }
