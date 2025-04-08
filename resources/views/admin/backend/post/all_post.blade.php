@@ -35,7 +35,7 @@
         @foreach ($post as $key=> $item) 
             <tr>
                 <td>{{ $key+1 }}</td>
-                <td>{{ $item->blogcat_id }}</td>
+                <td>{{ $item['blog']['category_name'] }}</td>
                 <td>{{ $item->post_title }}</td>
                 <td> <img src="{{ asset($item->image) }}" style="width:70px; height:40px;"> </td>
                 <td>{!! Str::limit($item->long_descp, 50, '...')  !!}</td>
