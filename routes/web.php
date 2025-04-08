@@ -139,6 +139,17 @@ Route::controller(BlogController::class)->group(function(){
 });
 
 
+Route::controller(BlogController::class)->group(function(){
+    Route::get('/all/blog/post', 'AllBlogPost')->name('all.blog.post'); 
+    Route::post('/store/blog/category', 'StoreBlogCategory')->name('store.blog.category');  
+    Route::get('/edit/blog/category/{id}', 'EditBlogCategory'); 
+    Route::post('/update/blog/category', 'UpdateBlogCategory')->name('update.blog.category');  
+
+    Route::get('/delete/blog/category/{id}', 'DeleteBlogCategory')->name('delete.blog.category'); 
+
+});
+
+
 });
 
 // Out of any middleware 

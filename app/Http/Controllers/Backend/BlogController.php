@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\BlogCategory;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
+use App\Models\BlogPost;
 
 class BlogController extends Controller
 {
@@ -73,6 +74,12 @@ class BlogController extends Controller
 
     }
     // End Method 
+
+    public function AllBlogPost(){
+        $post = BlogPost::latest()->get();
+        return view('admin.backend.post.all_post',compact('post'));
+    }
+     // End Method 
 
 
 
