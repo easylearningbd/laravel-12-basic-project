@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 use App\Models\About;
+use App\Models\BlogCategory;
+use App\Models\BlogPost;
 
 class FrontendController extends Controller
 {
@@ -72,6 +74,13 @@ class FrontendController extends Controller
         } 
     }
     // End Method 
+
+    public function BlogPage(){
+        $blogcat = BlogCategory::latest()->withCount('posts')->get();
+        $post = BlogPost::latest()->limit(5)->get();
+        return view('home.blog.list_blog',compact('blogcat','post'));
+    }
+      // End Method 
 
 
 
