@@ -102,6 +102,11 @@ class FrontendController extends Controller
     }
     // End Method 
 
+    public function ContactUs(){
+        return view('home.contact.contact_us');
+    }
+    // End Method 
+
 
 
 }
