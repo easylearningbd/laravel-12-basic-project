@@ -5,7 +5,7 @@
     <div class="container">
 
       <div class="breadcrumb-content">
-        <h1 class="breadcrumb-title pb-0">Blog</h1>
+        <h1 class="breadcrumb-title pb-0">{{ $categoryname->category_name }}</h1>
         <div class="breadcrumb-menu-wrapper">
           <div class="breadcrumb-menu-wrap">
             <div class="breadcrumb-menu">
@@ -28,7 +28,7 @@
       <div class="row">
         <div class="col-lg-8">
       
-  @foreach ($post as $item) 
+  @foreach ($blog as $item) 
             
 <div class="lonyo-blog-wrap" data-aos="fade-up" data-aos-duration="500">
     <div class="lonyo-blog-thumb">
