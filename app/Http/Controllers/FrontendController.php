@@ -8,6 +8,7 @@ use Intervention\Image\Drivers\Gd\Driver;
 use App\Models\About;
 use App\Models\BlogCategory;
 use App\Models\BlogPost;
+use App\Models\Contact;
 
 class FrontendController extends Controller
 {
@@ -104,6 +105,23 @@ class FrontendController extends Controller
 
     public function ContactUs(){
         return view('home.contact.contact_us');
+    }
+    // End Method 
+
+    public function ContactMessage(Request $request){ 
+    
+        Contact::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'message' => $request->message, 
+            ]); 
+
+        $notification = array(
+            'message' => 'Your Message Sent Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
     }
     // End Method 
 
