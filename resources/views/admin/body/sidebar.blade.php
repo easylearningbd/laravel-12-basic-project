@@ -230,7 +230,7 @@
                     <a href="{{ route('all.blog.post') }}" class="tp-link">All Blog Post </a>
                 </li>  
                 <li>
-                    <a href="{{ route('all.blog.category') }}" class="tp-link">Add Blog Post </a>
+                    <a href="{{ route('add.blog.post') }}" class="tp-link">Add Blog Post </a>
                 </li>  
             </ul>
         </div> 
