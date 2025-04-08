@@ -172,6 +172,23 @@ class BlogController extends Controller
     }
     // End Method 
 
+    public function DeleteBlogPost($id){
+        $item = BlogPost::find($id);
+        $img = $item->image;
+        unlink($img);
+
+        BlogPost::find($id)->delete();
+
+        $notification = array(
+            'message' => 'Blog Post Delete Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);   
+
+    }
+    // End Method 
+
 
 
 
