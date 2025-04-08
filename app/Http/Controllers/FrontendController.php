@@ -78,9 +78,20 @@ class FrontendController extends Controller
     public function BlogPage(){
         $blogcat = BlogCategory::latest()->withCount('posts')->get();
         $post = BlogPost::latest()->limit(5)->get();
-        return view('home.blog.list_blog',compact('blogcat','post'));
+        $recentpost = BlogPost::latest()->limit(3)->get();
+        return view('home.blog.list_blog',compact('blogcat','post','recentpost'));
     }
       // End Method 
+
+    public function BlogDetails($slug){
+
+        $blog = BlogPost::where('post_slug',$slug)->first();
+        $blogcat = BlogCategory::latest()->withCount('posts')->get();
+        $recentpost = BlogPost::latest()->limit(3)->get();
+        return view('home.blog.blog_details',compact('blog','blogcat','recentpost'));
+
+    }
+     // End Method 
 
 
 

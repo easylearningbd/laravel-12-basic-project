@@ -43,7 +43,7 @@
         </ul>
     </div>
     <div class="lonyo-blog-content">
-        <h2><a href="single-blog.html"> {{ $item->post_title }}</a></h2>
+        <h2><a href="{{ url('blog/details/'.$item->post_slug) }}"> {{ $item->post_title }}</a></h2>
         <p>{!! Str::limit($item->long_descp, 180, '...')  !!}</p>
     </div>
     <div class="lonyo-blog-btn">
@@ -95,45 +95,25 @@
 
             <div class="lonyo-blog-widgets">
               <h4>Recent Posts</h4>
-              <a class="lonyo-blog-recent-post-item" href="single-blog.html">
-                <div class="lonyo-blog-recent-post-thumb">
-                  <img src="assets/images/blog/b4.png" alt="">
-                </div>
-                <div class="lonyo-blog-recent-post-data">
-                  <ul>
-                    <li><img src="assets/images/blog/date.svg" alt="">June 15, 2025</li>
-                  </ul>
-                  <div>
-                    <h4>7 businesses for easy money</h4>
-                  </div>
-                </div>
-              </a>
-              <a class="lonyo-blog-recent-post-item" href="single-blog.html">
-                <div class="lonyo-blog-recent-post-thumb">
-                  <img src="assets/images/blog/b5.png" alt="">
-                </div>
-                <div class="lonyo-blog-recent-post-data">
-                  <ul>
-                    <li><img src="assets/images/blog/date.svg" alt="">June 12, 2025</li>
-                  </ul>
-                  <div>
-                    <h4>10 Finance apps for you to use</h4>
-                  </div>
-                </div>
-              </a>
-              <a class="lonyo-blog-recent-post-item" href="single-blog.html">
-                <div class="lonyo-blog-recent-post-thumb">
-                  <img src="assets/images/blog/b6.png" alt="">
-                </div>
-                <div class="lonyo-blog-recent-post-data">
-                  <ul>
-                    <li><img src="assets/images/blog/date.svg" alt="">June 08, 2025</li>
-                  </ul>
-                  <div>
-                    <h4>How to create a stock market</h4>
-                  </div>
-                </div>
-              </a>
+    
+    @foreach ($recentpost as $recent) 
+    <a class="lonyo-blog-recent-post-item" href="single-blog.html">
+    <div class="lonyo-blog-recent-post-thumb">
+        <img src="{{ asset($recent->image) }}" alt="" style="width: 100px; height:100px;">
+    </div>
+    <div class="lonyo-blog-recent-post-data">
+        <ul>
+        <li><img src="{{ asset('frontend/assets/images/blog/date.svg') }}" alt="">{{ $recent->created_at->format('M d Y')  }}</li>
+        </ul>
+        <div>
+        <h4>{{  $recent->post_title }}</h4>
+        </div>
+    </div>
+    </a>
+    @endforeach
+
+               
+           
             </div>
              
           </div>
